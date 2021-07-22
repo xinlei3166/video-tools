@@ -1,0 +1,98 @@
+@import './assist';
+@import './theme';
+
+// card统一阴影
+.shadow-card {
+  box-shadow: @box-shadow-base;
+}
+
+/* 增加全局btn颜色 */
+.reset-btn {
+  background: @warning-color !important;
+  color: #fff !important;
+  border-color: @warning-color !important;
+  &:focus,
+  &:hover {
+    background: @warning-color-secondary !important;
+    color: #fff !important;
+    border-color: @warning-color-secondary !important;
+  }
+}
+
+.success-btn {
+  background: @success-color !important;
+  color: #fff !important;
+  border-color: @success-color !important;
+  &:hover,
+  &:focus {
+    background: @success-color-secondary !important;
+    color: #fff !important;
+    border-color: @success-color-secondary !important;
+  }
+}
+
+/* card tabs style */
+.tabs-card .ant-card-head {
+  min-height: 45px !important;
+}
+.tabs-card .ant-tabs-nav-container {
+  font-size: 14px !important;
+}
+.tabs-card .ant-tabs-tab {
+  /*padding: 12px 16px !important;*/
+  padding: 16px !important;
+}
+.tabs-card .ant-tabs-extra-content {
+  /*line-height: 46px !important;*/
+  line-height: 54px !important;
+}
+
+.text-light {
+  color: @text-color-secondary;
+}
+
+.text-primary {
+  color: @primary-color;
+}
+
+.text-success {
+  color: @success-color;
+}
+
+.text-error {
+  color: @error-color;
+}
+
+.text-btn-success {
+  cursor: pointer;
+  color: @success-color;
+}
+
+.text-btn, .phone-icon, .im-icon {
+  color: #1890ff;
+  cursor: pointer;
+}
+
+.text-btn:hover, .phone-icon:hover {
+  color: #40a9ff;
+}
+
+.text-btn + .text-btn {
+  margin-left: 8px;
+}
+
+.label-required::before {
+  content: '*';
+  color: @error-color;
+  margin-right: 4px;
+}
+
+.input-readonly {
+  cursor: default;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.not-clickable {
+  cursor: not-allowed;
+}
+
