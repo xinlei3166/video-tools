@@ -1,6 +1,21 @@
 {
   "name": "video-tools",
-  "description": "视频转换工具",
+  "description": "用 electron 和 ffmpeg 做的一个视频转换工具，m3u8转换为mp4并下载到本地。",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xinlei3166/video-tools"
+  },
+  "keywords": [
+    "electron",
+    "ffmpeg",
+    "video",
+    "m3u8",
+    "mp4"
+  ],
+  "bugs": {
+    "url": "https://github.com/xinlei3166/video-tools/issues"
+  },
+  "homepage": "https://github.com/xinlei3166/video-tools",
   "author": "junxi",
   "version": "1.0.0",
   "main": "dist/main/index.js",
