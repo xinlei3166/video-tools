@@ -25,7 +25,17 @@ export default ({ mode, command }) => {
       outDir,
       emptyOutDir: true
     },
-    css: { preprocessorOptions: {} },
+    css: {
+      preprocessorOptions: {
+        // less: {
+        //   javascriptEnabled: true,
+        //   modifyVars: {
+        //     '@brand-color': '#0077FA'
+        //   }
+        //   additionalData: `@import "./src/render/styles/theme.less";`
+        // }
+      }
+    },
     plugins: [
       vue(),
       jsx(),
