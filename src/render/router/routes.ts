@@ -1,8 +1,8 @@
-import { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 
 const layout = () => import('@/components/layout/index.vue')
 
-const routes: RouteRecordRaw[] = [
+const routes = [
   {
     path: '/',
     meta: {},
@@ -31,6 +31,6 @@ const routes: RouteRecordRaw[] = [
     path: '/:pathMatch(.*)*',
     redirect: { name: 'home' }
   }
-]
+] as RouteRecordRaw[]
 
 export default routes

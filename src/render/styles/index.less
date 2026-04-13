@@ -1,98 +1,162 @@
-@import './assist';
 @import './theme';
+@import './tdesign';
 
-// card统一阴影
-.shadow-card {
-  box-shadow: @box-shadow-base;
+// required
+.label-required::before {
+  content: '*';
+  color: theme('colors.error');
+  margin-right: 4px;
 }
 
-/* 增加全局btn颜色 */
-.reset-btn {
-  background: @warning-color !important;
-  color: #fff !important;
-  border-color: @warning-color !important;
-  &:focus,
-  &:hover {
-    background: @warning-color-secondary !important;
-    color: #fff !important;
-    border-color: @warning-color-secondary !important;
+// overflow
+.overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// column-wrap
+.column-wrap {
+  display: flex;
+  align-items: center;
+}
+
+// column-mark
+.column-mark {
+  display: inline-block;
+  width: auto;
+  max-width: 240px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// dropdown-icon
+.dropdown-icon {
+  font-size: 12px;
+  vertical-align: baseline;
+}
+
+// card
+.my-card {
+  display: flex;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+// readonly-text
+.readonly-text {
+  .t-input.t-is-disabled {
+    cursor: default;
+    color: theme('colors.textPrimary');
   }
 }
 
-.success-btn {
-  background: @success-color !important;
-  color: #fff !important;
-  border-color: @success-color !important;
-  &:hover,
-  &:focus {
-    background: @success-color-secondary !important;
-    color: #fff !important;
-    border-color: @success-color-secondary !important;
-  }
+// nprogress style
+#nprogress .bar {
+  background: theme('colors.brand');
 }
 
-/* card tabs style */
-.tabs-card .ant-card-head {
-  min-height: 45px !important;
-}
-.tabs-card .ant-tabs-nav-container {
-  font-size: 14px !important;
-}
-.tabs-card .ant-tabs-tab {
-  /*padding: 12px 16px !important;*/
-  padding: 16px !important;
-}
-.tabs-card .ant-tabs-extra-content {
-  /*line-height: 46px !important;*/
-  line-height: 54px !important;
-}
-
-.text-light {
-  color: @text-color-secondary;
-}
-
-.text-primary {
-  color: @primary-color;
-}
-
-.text-success {
-  color: @success-color;
-}
-
-.text-error {
-  color: @error-color;
-}
-
+// text-btn
 .text-btn-success {
   cursor: pointer;
-  color: @success-color;
+  color: theme('colors.success');
+  &:hover {
+    color: theme('colors.successHover');
+  }
 }
 
-.text-btn, .phone-icon, .im-icon {
-  color: #1890ff;
+.text-btn-error {
+  cursor: pointer;
+  color: theme('colors.error');
+  &:hover {
+    color: theme('colors.errorHover');
+  }
+}
+
+.text-btn-disabled {
+  cursor: not-allowed;
+  color: theme('colors.textDisabled');
+}
+
+.text-btn,
+.phone-icon,
+.im-icon {
+  color: theme('colors.brand');
   cursor: pointer;
 }
 
-.text-btn:hover, .phone-icon:hover {
-  color: #40a9ff;
+.text-btn:hover,
+.phone-icon:hover {
+  color: theme('colors.brandHover');
 }
 
 .text-btn + .text-btn {
   margin-left: 8px;
 }
 
-.label-required::before {
-  content: '*';
-  color: @error-color;
-  margin-right: 4px;
+.hover-btn {
+  cursor: pointer;
+
+  &:hover {
+    color: theme('colors.brand') !important;
+  }
 }
 
-.input-readonly {
-  cursor: default;
-  color: rgba(0, 0, 0, 0.85);
+.phone-icon {
+  font-size: 20px;
+  margin-left: 8px;
 }
 
-.not-clickable {
-  cursor: not-allowed;
+// card
+.flex-card {
+  display: flex;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
 }
 
+// tree
+.tree-flex-card {
+  height: calc(100vh - 64px - 32px);
+}
+.tree-left {
+  border-right: 1px solid theme('colors.borderLevel1');
+}
+.tree-right {
+  display: flex;
+  flex-direction: column;
+}
+// .tree-right-table {
+//   overflow-y: auto;
+// }
+.tree-row {
+  &:hover .tree-row-btn-group {
+    visibility: visible;
+  }
+  .tree-row-title {
+    display: inline-flex;
+    align-items: flex-start;
+    padding: 0 0 0 2px;
+  }
+  .tree-row-desc {
+    margin-left: 5px;
+    flex-shrink: 0;
+    color: theme('colors.textPlaceholder');
+  }
+  .tree-row-btn-group {
+    visibility: hidden;
+    white-space: nowrap;
+  }
+}
+
+// my-status
+.my-status-success {
+  color: theme('colors.success');
+}
+.my-status-error {
+  color: theme('colors.error');
+}

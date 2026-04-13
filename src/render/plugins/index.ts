@@ -1,11 +1,9 @@
-import { App } from 'vue'
-import antd from './antd'
-import icon from './icon'
+import type { App } from 'vue'
 import bus from './bus'
+import icon from './icon'
 
 export default {
   install: (app: App) => {
-    app.use(antd)
     app.use(icon)
     app.use(bus)
   }

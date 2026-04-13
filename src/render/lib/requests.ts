@@ -1,6 +1,6 @@
 import axios from 'axios'
 import qs from 'qs'
-import { message } from 'ant-design-vue'
+import { MessagePlugin } from 'tdesign-vue-next'
 
 axios.defaults.timeout = 2000 // 请求超时时间
 axios.defaults.baseURL = '' // 其他地方请求地址可以省略域名
@@ -71,7 +71,7 @@ axios.interceptors.response.use(
     } else {
       error.message = '连接服务器失败'
     }
-    message.error(error.message)
+    MessagePlugin.error(error.message)
     return Promise.reject(error)
   }
 )

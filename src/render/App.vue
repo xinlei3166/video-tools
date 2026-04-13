@@ -1,19 +1,13 @@
 <template>
-  <a-config-provider :locale="locale">
+  <t-config-provider :global-config="globalConfig">
     <router-view />
-  </a-config-provider>
+  </t-config-provider>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import zhCN from 'ant-design-vue/es/locale/zh_CN'
+<script lang="ts" setup>
+import type { GlobalConfigProvider } from 'tdesign-vue-next'
 
-export default defineComponent({
-  name: 'App',
-  setup() {
-    return { locale: zhCN }
-  }
-})
+const globalConfig: GlobalConfigProvider = {}
 </script>
 
 <style lang="less" scoped></style>

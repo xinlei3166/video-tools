@@ -1,15 +1,15 @@
 <template>
   <div class="video">
     <div class="row">
-      <a-input
-        v-model:value="m3u8Url"
+      <t-input
+        v-model="m3u8Url"
         class="before"
-        allow-clear
+        clearable
         placeholder="请输入视频地址：https://xxx.com/xxx.m3u8"
       />
-      <a-button class="mx-16" type="primary" :disabled="!m3u8Url" @click="onConvertM3u8ToMp4">
+      <t-button class="mx-4" theme="primary" :disabled="!m3u8Url" @click="onConvertM3u8ToMp4">
         转换为mp4
-      </a-button>
+      </t-button>
     </div>
     <div v-if="loading" class="row">
       <span class="after">视频正在生成中...</span>
@@ -60,7 +60,9 @@ export default defineComponent({
 <style lang="less" scoped>
 .row {
   margin-top: 32px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .before {
@@ -71,6 +73,6 @@ export default defineComponent({
   min-width: 400px;
   display: inline-block;
   margin-top: 8px;
-  color: @text-color-secondary;
+  color: theme('colors.textSecondary');
 }
 </style>
