@@ -12,7 +12,7 @@
       </t-button>
     </div>
     <div v-if="loading" class="row">
-      <span class="after">视频正在生成中...</span>
+      <span class="after text-brand">视频正在生成中...</span>
     </div>
     <div v-if="mp4Url" class="row">
       <span class="after">{{ mp4Url }}</span>

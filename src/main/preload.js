@@ -1,5 +1,6 @@
 const { ipcRenderer, contextBridge } = require('electron')
 
+// @ts-nocheck
 const sendChannels = ['toMain']
 const onChannels = ['fromMain']
 
