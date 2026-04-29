@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { urlPattern } from '@/utils/patterns'
+import { urlPattern } from '@/utils'
 
 export default defineComponent({
   props: {},
